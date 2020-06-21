@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="operadores.js"></script>
+
+</head>
+<body>
+    <script src="menu.js"></script><br>
+    <!--Div where the WhatsApp will be rendered-->  
+    <h1>Tipos de Operadores</h1>
+    <section class="solucion">
+        <form id="formulario">
+            <p>Número 1: 
+                <input type="text" id="numerouno" name="numerouno" />
+                <button type="button" onclick="Decrecer1(numerouno.value)">-</button>
+                <button type="button" onclick="Incrementar1(numerouno.value)">+</button>
+            </p>
+            <p>Número 2: 
+                <input type="text" id="numerodos" name="numerodos" />
+                <button type="button" onclick="Decrecer2(numerodos.value)">-</button>
+                <button type="button" onclick="Incrementar2(numerodos.value)">+</button>
+            </p>
+
+            <p>
+                <button type="button" onclick="Sumar(numerouno.value, numerodos.value)">Suma</button>
+                <button type="button" onclick="Restar(numerouno.value, numerodos.value)">Diferencia</button>
+                <button type="button" onclick="Multiplicar(numerouno.value, numerodos.value)">Producto</button>
+                <button type="button" onclick="Dividir(numerouno.value, numerodos.value)">Cociente</button>
+                <button type="button" onclick="Comparar(numerouno.value, numerodos.value)">Comparar</button>         
+            </p>
+
+            <p>
+                Resultado: <input type="text" id="resultado" name="resultado" /> 
+                Residuo: <input type="text" id="residuo" name="residuo"><br>
+                Comparación: <spam id="Analisis"></spam>
+            </p>
+            
+        </form>
+    </section>
+
+
+    <script src="pie.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica con Objetos</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <script src="menu.js"></script><br>
+        <h1>Práctica con Objetos</h1>
+        <section class="asignaciones">
+        <h2>Asignaciones</h2>
+        <p>Para empezar, intente añadir un par de líneas de creación de objetos propias, y trate de obtener y asignar valores a los miembros de las instancias de objetos</p>
+        <p>Además, hay un par de problemas con nuestro método bio() — la salida siempre incluye el pronombre "He", incluso para personas de otros géneros. Y la bio incluye
+             solamente dos intereses, sin importar la cantidad que hay en el array interests. ¿Podría corregir esto en la definición de la clase (constructor)? Puede poner 
+             cualquier código dentro de un constructor (probablemente necesite algunos condicionales y un bucle). Piense como las sentencias deben ser estructuradas dependiendo 
+             del género, y de la cantidad de intereses.</p>
+        <p><strong>Nota:</strong> Si está atascado, hay una respuesta en nuestro 
+            <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html" target="_blank">repositorio de GitHub</a>
+             (<a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html" target="_blank">Live</a>) igualmente intente resolverla 
+             usted primero!</p>
+    </section>
+    <section class="solucion">
+        <h2>Mis datos
+            <button type="button" onclick="persona1.verDatos()">Persona 1</button>
+            <button type="button" onclick="persona1.bio()">Ver Biografia</button>
+            <button type="button" onclick="persona2.verDatos()">Persona 2</button>
+            <button type="button" onclick="persona2.bio()">Ver Biografia</button>
+            <button type="button" onclick="persona3.verDatos()">Persona 3</button>
+            <button type="button" onclick="persona3.bio()">Ver Biografia</button>
+        </h2>
+        <p>Nombre: <input id="nombre" type="text"></p>
+        <p>Apellido: <input id="apellido" type="text"></p>
+        <p>Genero: <input id="genero" type="text"></p>
+        <p>Edad: <input id="edad" type="text"></p>
+        <p>Intereses: <input id="interes1" type="text"></p>
+        <p>Intereses: <input id="interes2" type="text"></p>
+    </section>
+
+    <script src="pie.js"></script>
+    <script>
+        function Persona(firt, last, age, sexo, hobbie) {
+            this.identidad = {
+            'nombre': firt,
+            'apellido' : last
+            };
+
+            this.edad = age;
+
+            this.genero = sexo;
+
+            this.intereses = hobbie;
+
+            this.bio = function() {
+                let sexoPersonalizado = '';
+                if(this.genero=='Masculino'){
+                    sexoPersonalizado = ' él ';
+                }else{
+                    sexoPersonalizado = ' ella ';
+                }
+                let largoHobbies = this.intereses.length;                
+                let resumenHobbies = '';
+                let conjuncion = ', ';
+                for(var i=0;i<largoHobbies;i++){
+                    if(i==(largoHobbies-1)){
+                        conjuncion = '.';
+                    }
+                    if(i==(largoHobbies-2)){
+                        conjuncion = ' y ';
+                    }
+                    resumenHobbies += this.intereses[i] + conjuncion;
+                }
+                
+                alert(this.identidad.nombre + ' ' + this.identidad.apellido + ' tiene ' + this.edad + ' años de edad. A '+ sexoPersonalizado +'le gusta ' + resumenHobbies + '.');
+            };
+
+            this.saludo = function() {
+            alert('Hola! Yo soy ' + this.identidad.nombre + '.');
+            };
+
+            this.verDatos = function(){
+                document.getElementById("nombre").value = this.identidad.nombre;
+                document.getElementById("apellido").value = this.identidad.apellido;
+                document.getElementById("edad").value = this.edad;
+                document.getElementById("genero").value = this.genero;
+                document.getElementById("interes1").value = this.intereses[0];
+                document.getElementById("interes2").value = this.intereses[1];
+            };
+        }
+
+    var persona1 = new Persona('Silvino', 'Delgado', 44, 'Masculino', ['escuchar música', 'programar']);
+    // Tarea 1
+    var persona2 = new Persona("Deyanira","Gonzalez",47,"Femenino",["Leer","Diseñar","Trabajar"]);
+    var persona3 = new Persona("Astrid Carolina","Herrera Pedroza",12,"Femenino",["Ver TV","Diseñar Ropa","Bromear","Jugar"]);
+    </script>
+</body>
+</html>

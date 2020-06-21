@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendChild</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <script src="menu.js"></script><br>
+    <h1>appendChild</h1>
+    <div class="asignaciones">
+    <p>Los métodos de JavaScript appendChild() permiten agregar elementos y contenido en una página.</p>
+    <p>Sus aplicaciones en la práctica son diversas. Ambos se complementan y son más poderosos que innerHTML, pero requieren de más código.</p>
+    <p>A continuación muestro solo algunos ejemplos sencillos de su empleo elemental, porque su uso requiere un completo tutorial.</p>
+    <h2>Escribir contenido en páginas con <b>appendChild()</b></h2>
+    <p>El método de JavaScript appendChild(), se usa para agregar contenido en el HTML. En el siguiente ejemplo agregamos un párrafo de texto a uno ya existente.</p>
+    </div>
+    <section class="solucion">
+    <center><button type="button" onclick="addtexto()">Añadir texto</button></center>
+    <p id="contenido">Texto Existente</p>
+    </section>
+
+<script>
+    function addtexto(){
+        var texto = document.createTextNode(" Este es el nuevo texto que se agrega al parrafo.");
+        document.getElementById("contenido").appendChild(texto);
+    }
+</script>
+</body>
+</html>

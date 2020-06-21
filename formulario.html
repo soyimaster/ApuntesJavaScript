@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Formulario*/
+            #responsive-form{
+                max-width:100%;
+                margin:0 auto;
+            width:100%;
+            }
+            .form-row{
+                width: 100%;
+            }
+            .column-half, .column-full{
+                float: left;
+                position: relative;
+                padding: 0.65rem;
+                width:100%;
+                -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box
+            }
+            .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            h2.formulario{
+                text-align:center;
+            }
+
+            /* Media Query */
+            @media only screen and (min-width: 48em) { 
+                .column-half{
+                    width: 50%;
+                }
+            }
+        /* Fin Formulario*/
+    </style>
+</head>
+<body>
+<h2 class="prein">Planes de Asistencia</h2>
+<h3 class="prein">Cotización</h3>
+
+
+<div id="responsive-form" class="clearfix"><!--Responsive Formulario-->
+
+<div class="form-row">
+<div class="column-half">[text* nombres placeholder "Nombres"]</div>
+<div class="column-half">[text* apellidos placeholder "Apellidos"]</div>
+</div>
+
+<div class="form-row">
+<div class="column-half">[text* cedula placeholder "Cédula"]</div>
+<div class="column-half">[email* email placeholder "Correo electrónico"]</div>
+</div>
+
+<div class="form-row">
+<div class="column-half">[text* origen placeholder "Pais de Origen"]</div>
+<div class="column-half">[text* destino placeholder "País destino"]</div>
+</div>
+
+<div class="form-row">
+<div class="column-half">Fecha de salida[date* fecha-salida]</div>
+<div class="column-half">Fecha de regreso[date* fecha-retorno]</div>
+</div>
+
+
+<div class="form-row">
+<div class="column-half">[text* pasajeros placeholder "¿Cuantas personas viajan?"]</div>
+<div class="column-half">[text* edades placeholder "Escriba las edades de cada uno separadas por comas"]</div>
+</div>
+
+<div class="form-row">
+<div class="column-half"></div>
+<div class="column-half">[submit "Enviar"]</div>
+</div>
+
+</div><!--end responsive-form-->
+
+<section>
+    <p>De: [nombres] [apellidos] <[email]></p>
+    <p>Asunto: [your-subject]</p>
+    <br>
+    <p>Datos de la Cotización:</p>
+    <p>Nombres:</p> 
+    <p>Apellidos:</p>
+    <p>celular: </p>
+    <p>Email: </p>
+    <br>
+    <p>Fecha de Salida:</p>
+    <p>Fecha de Retorno:</p>
+    <p>Destino:</p>
+    <p>Viaja desde: </p>
+    <p>Cuantos pasajeros:</p>
+    <p>Edades de los pasajeros: </p>
+    <br>
+    <p>Nota:</p>
+    <p>Este mensaje se ha enviado desde un formulario de Cotizaciones de Pan Alliance (https://panalliance.info)</p>
+</section>
+</body>
+</html>

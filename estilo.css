@@ -1,0 +1,188 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    /*max-width: 1170px;
+    min-width: 480px;*/
+    margin: 0 auto;
+}
+
+.lastResult {
+    color: white;
+    padding: 3px;
+ }
+.juego{
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+  }
+
+h1, h2{
+    text-align: center;
+}
+.menu a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+}
+.menu a:visited{
+    color:white;
+}
+.menu a:active{
+    color: yellow;
+}
+.menu a:hover{
+    color: yellowgreen;
+}
+
+p{
+    text-align: justify;
+}
+.foto{
+    border-radius: 50%;
+    width: 200px;
+}
+.menu{
+    text-align: center;
+    background-color: rgb(32, 5, 5);
+    padding: 10px 5px 10px 5px;
+    box-sizing: border-box;
+}
+.cabecera{
+    background-color: blanchedalmond;
+    width: 100%;
+    margin: 0px;   
+}
+.colortexto{
+    color: crimson;
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.asignaciones{
+    width: 60%;
+    margin: 0 auto;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #3d3a30;
+    color: #ffffff;
+}
+.asignaciones a{   
+    color: #8c8c8c;
+}
+.asignaciones a:visited{
+    color: #8c8c8c;
+}
+.asignaciones a:active{
+    color:#8c8c8c;
+}
+.asignaciones a:hover{
+    color: yellowgreen;
+}
+.solucion{
+    width: 60%;
+    margin: 0 auto;
+    background-color: lightgray;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.muestra{
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.usuario{
+    position: fixed;
+    border-radius: 50%;
+    width: 75px;    
+    top: 5px;
+    right: 5px;
+}
+/* header styles */
+
+header h1 {
+    font-family: 'Faster One', cursive;
+    font-size: 4rem;
+    text-align: center;
+  }
+  
+header p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  /* section styles */
+
+section article {
+    width: 33%;
+    float: left;
+    text-align: left;
+  }
+  
+section p {
+    margin: 5px 0;
+  }
+  
+section ul {
+    margin-top: 0;
+  }
+  
+section h2 {
+    font-family: 'Faster One', cursive;
+    font-size: 2.1rem;
+    letter-spacing: -5px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+.publicidad{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #000000;
+}  
+.banner{
+    width: 100%;
+}
+pre{
+    font-size: 18px;
+    font-size: 1rem;
+    background: #eee;
+    border: 0 solid #16a009;
+        border-right-width: 0px;
+        border-left-width: 0px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 15px;
+        padding-left: 15px;
+    position: relative;
+    font-family: consolas,monaco,"Andale Mono",monospace;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow: auto;
+    direction: ltr !important;
+    text-align: left !important;
+    border-left-width: 5px !important;
+    border-right-width: 0 !important;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+.tabla{
+    width: 100%;
+    background-color: saddlebrown;
+}
+.botones{
+    vertical-align: top;
+    width: 20%;
+}
+.video{
+    width: 800%;
+    text-align: center;
+}

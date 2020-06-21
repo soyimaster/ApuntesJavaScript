@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipos de objetos</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    
+</head>
+<body>
+    <script src="menu.js"></script><br>
+    <h1>Prototipos de Objetos</h1>
+    <div class="asignaciones">
+        <p>Los prototipos son un mecanismo mediante el cual los objetos en JavaScript heredan características entre sí. 
+            En este artículo, explicaremos como funcionan los prototipos y también cómo se pueden usar las propiedades de los 
+            prototipos para añadir métodos a los contructores existentes.</p>
+        <h2>Objetivo</h2>
+        <p>Comprender los prototipos de objectos de Javascript, cómo la cadena de prototype funciona, y cómo añadir nuevos métodos a la propiedad prototype.</p>
+        <h2>¿Un lenguaje basado en prototipos?</h2>
+        <p>JavaScript es a menudo descrito como un lenguaje basado en prototipos. Para proporcionar mecanismos de herencia los 
+            objetos pueden tener un prototipo (objeto prototipo) asociado, que actúa como una plantilla desde la que el objeto hereda métodos y propiedades.</p>
+        <p>Un objeto prototipo puede tener, a su vez, otro objeto prototipo asociado desde el que heredar métodos y propiedades, y así sucesivamente. 
+            Esto es conocido con frecuencia como la cadena de prototipos, y explica por qué objetos diferentes pueden tener disponibles propiedades y métodos definidos en otros objetos.</p>    
+        <p>Aunque para ser exactos, los métodos y propiedades son definidas en la propiedad prototype, que reside en la función constructor del objeto, no en la instancia del objeto.</p>
+        <p>Así pues tenemos que, en JavaScript, se establece un enlace entre la instancia del objeto y su prototipo (este se encuentra en la propiedad <strong>__proto__</strong> de la instancia, 
+            que es inicializada por la propiedad <strong>prototype</strong> del constructor). Y, como ya se ha comentado, el objeto tendrá acceso a una serie de métodos y propiedades que se encuentran 
+            a lo largo de la cadena de prototipos asociada.</p>
+        <p></p>
+        </div>
+    <div class="solucion"></div>
+</body>
+</html>

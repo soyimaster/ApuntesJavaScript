@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF y Objetos</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="sentencias.js"></script>
+</head>
+<body>
+    <script src="menu.js"></script><br>
+    <h1>IF y Objetos</h1>
+    <div class="asignaciones"></div>
+    <div class="solucion">
+        <p><strong>¿Qué día es hoy si coloco un número del 1 al 7.</strong></p><br />
+        <p>Coloca un número de 1 al 7: <input type="text" id="numero"><spam id="respuesta"></spam></p>
+        <p><button type="button" onclick="queDiaEs(numero.value)">Procesar</button></p>
+        <br>
+        <p>Una Semana tiene <spam id="minutos"></spam> minutos</p>
+
+        <h2>Creando un Objeto Sencillo</h2>
+        <h2>Mis datos
+            <button type="button" onclick="persona1.verDatos()">Ver datos</button>
+            <button type="button" onclick="persona1.bio()">Alerta</button>
+            <button type="button" onclick="persona1.saludo()">Saludar</button>
+        </h2>
+        <p>Nombre: <input id="nombre" type="text"></p>
+        <p>Apellido: <input id="apellido" type="text"></p>
+        <p>Genero: <input id="genero" type="text"></p>
+        <p>Edad: <input id="edad" type="text"></p>
+        <p>Intereses: <input id="interes1" type="text"></p>
+        <p>Intereses: <input id="interes2" type="text"></p>
+    </div>
+    <script src="pie.js"></script>
+</body>
+</html>

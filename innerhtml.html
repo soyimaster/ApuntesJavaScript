@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impresión</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    
+    <script src="menu.js"></script>
+    <h1>Uso del innerHTML</h1>
+   
+    <section class="solucion">
+        <section class="muestra">
+            <h2>Ejemplo Uno</h2>            
+            <!-- Ejemplo Uno -->
+            <a href="javascript:escribir()">Escribir</a>
+            <div class="colortexto" id="contenedor"></div>
+        </section>
+        <section class="muestra">
+            <h2>Ejemplo Dos</h2>
+            <!-- Ejemplo Dos-->
+            <textarea id="entrada2" onkeyup="escribir2()"></textarea><br>
+            <div class="colortexto" id="contenedor2"></div>
+        </section>
+        <section class="muestra">
+            <h2>Ejemplo Tres</h2>
+            <!--Ejemplo Tres-->
+            Cambiar Portadas<br>
+            <button type="button" onclick="india()">Ver Foto</button>
+            <button type="button" onclick="decameron()">Ver video</button>
+            <button type="button" onclick="video2()">Video 2</button></section>
+            <div class="muestra" id="portada"></div>
+        </section>
+
+
+
+    <script>
+            function escribir(){
+                document.getElementById('contenedor').innerHTML='Párrafo de texto escrito en el contenedor, usando innerHTML';
+            }
+            function escribir2(){
+                variable = document.getElementById('entrada2').value;
+                document.getElementById('contenedor2').innerHTML=variable;
+            }
+            function india(){      
+                var variable2 = "<img class='foto' src='omar.jpg'>";          
+                document.getElementById('portada').innerHTML=variable2;
+            }
+            function decameron(){      
+                var variable2 = "<iframe width='560' height='315' src='https://www.youtube.com/embed/-wUfq5taiZM' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";          
+                document.getElementById('portada').innerHTML=variable2;
+            }
+            function video2(){
+                let variable="<iframe width='560' height='315' src='https://www.youtube.com/embed/rp4NKWb7dXk' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+                document.getElementById("portada").innerHTML=variable;
+            }
+    </script>
+    
+    <script src="pie.js"></script>
+</body>
+</html>

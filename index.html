@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de JavaScript</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <script src="menu.js"></script><br>
+        <h1>Documentación</h1>
+        <div class="asignaciones">
+        <h2>Manuales de Mozilla</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
+            <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps" target="_blank">Primeros pasos con JavaScript</a></li>
+            <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/Object-oriented_JS" target="_blank">Programacion Orientada a Objetos - Lo Básico</a></li>
+            <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/Object_prototypes" target="_blank">Prototipos de objetos</a></li>
+        </ul>
+    </div>
+    <div class="solucion">
+        <h2>Videos Interesantes</h2>
+        <table class="tabla">
+            <tr>
+                <td class="botones">
+                    <button type="button" onclick="videos(1)">Word Press | Sistema de Reservas</button>
+                    <button type="button" onclick="videos(2)">Moddle | Pregunta de opción múltiple</button>
+                    <button type="button" onclick="videos(3)">Moddle | Tipo de pregunta</button>
+                    <button type="button" onclick="videos(4)">Open Source | PeaZip, el reemplazo de WinZip y WinRar</button>
+                </td>
+                <td class="video">
+                    <p id="video"></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="pie.js"></script>
+    <script>
+        function videos(valor){
+            let numero = parseInt(valor);
+            let marco=[];     
+            marco[1] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/jc2Q4uV281g' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+            marco[2] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/3J-WpodzrGM' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+            marco[3] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/ckDbm7UZ_wQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+            marco[4] = "<iframe width='560' height='315' src='https://www.youtube.com/embed/lHMWFLWdToM' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+            document.getElementById("video").innerHTML = marco[numero];
+        }
+    </script>
+</body>
+</html>
