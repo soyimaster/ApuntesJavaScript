@@ -8,7 +8,10 @@ const ctx = canvas.getContext('2d');
 propiedades canvas.width y canvas.height), de manera que el alto y ancho coincidan con el alto y ancho del navegador (viewport)  cuyos 
 valores se obtienen directamente de las propiedades window.innerWidth y window.innerHeight.*/ 
 const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight;
+//const height = canvas.height = window.innerHeight;
+const height = canvas.height = window.innerHeight/2;
+var tamano = 1;
+
 
 /*Esta función recibe dos números como argumentos de entrada (valor mínimo y maximo) y devuelve un número aleatorio entre ellos.*/
 function random(min, max) {
@@ -80,6 +83,7 @@ Ball.prototype.update = function() {
   }
 
 // Deteccion de colicion
+
 Ball.prototype.collisionDetect = function() {
     for (var j = 0; j < balls.length; j++) {
           if (!(this === balls[j])) {
@@ -88,7 +92,15 @@ Ball.prototype.collisionDetect = function() {
             var distance = Math.sqrt(dx * dx + dy * dy);
             
             if (distance < this.size + balls[j].size) {
-              balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+              //balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+              //balls[j].color = this.color = 'rgb(255,255,255)';
+              balls[j].size = tamano;
+              if(tamano < 50){
+                tamano++;
+              }else{
+                tamano = 1;
+              }
+              
             }
           }
           
@@ -126,8 +138,8 @@ function loop() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
     ctx.fillRect(0, 0, width, height);
   
-    while (balls.length < 10) {
-      var size = random(10,20);
+    while (balls.length < 5) {
+      var size = tamano;
       var ball = new Ball(
         // la posición de las pelotas, se dibujará al menos siempre
         // como mínimo a un ancho de la pelota de distancia al borde del
@@ -136,13 +148,13 @@ function loop() {
         random(0 + size,height - size),
         random(-7,7),
         random(-7,7),
-        'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
+        'rgb(' + random(100,255) + ',' + random(100,155) + ',' + random(50,200) +')',
         size
       );
       balls.push(ball);
     }
   
-    for (var i = 0; i < balls.length; i++) {      
+    for (var i = 0; i < balls.length; i++) {        
       balls[i].draw();      
       balls[i].update();
       balls[i].collisionDetect();
